@@ -1,0 +1,42 @@
+
+.userinfo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: #f0145a;
+}
+.userinfo-avatar {
+  width: 128rpx;
+  height: 128rpx;
+  margin: 20rpx;
+  border-radius: 50%;
+}
+
+.userinfo-nickname {
+  color: #fff;
+    align-items: center;
+}
+/* miniprogram/pages/index.wxss */
+.fenge {
+  border: 0;
+  border-bottom: 1px dashed #ccc;
+  background: #999;
+  margin-top: 30rpx;
+  margin-bottom: 30rpx;
+}
+.fenge1 {
+  border: 0;
+  background: #999;
+  margin-top: 30rpx;
+  margin-bottom: 30rpx;
+}
+
+.center{
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  justify-items: center;
+  align-items: center;
+  width: 100%;
+  height: 60rpx;
+}

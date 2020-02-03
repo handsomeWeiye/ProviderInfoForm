@@ -1,0 +1,14 @@
+{
+  "usingComponents": {
+    "van-button": "../../miniprogram_npm/vant-weapp/button/index",
+    "van-action-sheet": "../../miniprogram_npm/vant-weapp/action-sheet/index",
+    "van-field": "../../miniprogram_npm/vant-weapp/field/index",
+    "van-area": "../../miniprogram_npm/vant-weapp/area/index",
+    "van-datetime-picker": "../../miniprogram_npm/vant-weapp/datetime-picker/index",
+    "van-popup": "../../miniprogram_npm/vant-weapp/popup/index",
+    "van-picker": "../../miniprogram_npm/vant-weapp/picker/index",
+    "van-notice-bar": "../../miniprogram_npm/vant-weapp/notice-bar/index",
+      "van-radio": "../../miniprogram_npm/vant-weapp/radio/index",
+      "van-radio-group": "../../miniprogram_npm/vant-weapp/radio-group/index"
+  }
+}

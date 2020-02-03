@@ -1,0 +1,109 @@
+<!-- <text>个人信息模块</text> -->
+<van-notice-bar
+  text="您的认真填写，将会是合作的开始╰(○'◡'○)╮"
+/>
+
+  <view class="userinfo">
+    <button wx:if="{{!hasUserInfo}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 获取头像昵称 </button>
+    <block wx:else>
+      <image  class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
+      <text class="userinfo-nickname">{{userInfo.nickName}}</text>
+    </block>
+  </view>
+
+<van-cell-group>
+  <van-field
+    value="{{ companyName }}"
+    label="公司名"
+    placeholder="请输入您的公司名"
+    border="{{ true }}"
+    bind:change="inputCompanyName"
+  />
+    <van-field
+    value="{{ category }}"
+    label="类型"
+    disabled
+    placeholder="点击选择类型"
+    border="{{ true }}"
+    bindtap="categoryShowPopup"
+  />
+  <van-popup show="{{ isCategoryShow }}" bind:close="categoryClose" position="bottom" custom-style="height:40%;"><van-picker   show-toolbar
+  title="类型"
+  bind:cancel="categoryClose"
+  bind:confirm="categoryConfirm" columns="{{ categories }}"/></van-popup>
+
+  <van-field
+    value="{{ name }}"
+    label="姓名"
+    placeholder="请输入您的名字"
+    border="{{ true }}"
+    bind:change="inputName"
+  />
+    <van-field
+    value="{{ phone }}"
+    label="手机号"
+    placeholder="请输入手机号"
+    border="{{ true }}"
+    bind:change="inputPhone"
+  />
+
+      <van-field
+    value="{{ address }}"
+    label="发货地址"
+    placeholder="请输入您的发货地址,例四川成都"
+    border="{{ true }}"
+    bind:change="inputAddress"
+  />
+
+</van-cell-group>
+  <view class="fenge"></view>
+<!-- <text>产品信息模块</text> -->
+
+<van-cell-group>
+
+  <van-field
+    value="{{ productNam }}"
+    label="产品名"
+    placeholder="请输入您最具竞争力的产品，简要即可"
+    border="{{ true }}"
+    bind:change="inputProductName"
+  />
+    <van-field
+    value="{{ price }}"
+    label="价格"
+    placeholder="请输入批量采购价格（*元/斤）"
+    border="{{ true }}"
+    bind:change="inputPrice"
+    auto-focus="{{priceFocus}}"
+    bindtap="reminder"
+  />
+    <van-field
+    placeholder="请选择水果上市时间"
+    value="{{month}}"
+    label="上市时间"
+    disabled
+    border="{{ false }}"
+    bindtap="showPopup"
+   
+  />
+
+<van-popup show="{{ isDateShow }}" bind:close="onClose" position="bottom" custom-style="height: 50%;"><van-picker   show-toolbar
+  title="上市月份"
+  bind:cancel="onCancel"
+  bind:confirm="onConfirm" columns="{{ months }}"/></van-popup>
+</van-cell-group>
+  <view class="fenge"></view>
+<!-- <text>补充信息模块</text> -->
+<van-cell-group>
+  <van-field
+    value="{{ message }}"
+    label="留言"
+    type="textarea"
+    placeholder="您特别的优势，如破损补寄等等"
+    autosize
+    border="{{ false }}"
+    bind:change="inputMessage"
+  />
+</van-cell-group>
+<view class="fenge1"></view>
+<view class="center"><van-button type="primary" size="large" bindtap="onSend" round  custom-class="center" >确定</van-button></view>
